@@ -1,0 +1,85 @@
+<!--<h3>Username :    {{employee}}    </h3>
+<h3>Year : {{ year }}</h3>
+<h3>PI : {{ pi }}</h3>
+
+<h3>Date : {{ date }}</h3>
+<h3>User : {{ user.fullname }} {{ user.email }}</h3>
+
+
+<h3>Employees List:</h3>
+<ul>
+  <li   *ngFor="let emp of employees"   >{{ emp }}</li>
+</ul>
+
+
+<h3>Products:</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+
+
+    <tr *ngFor="let p of products">
+      <td>{{ p.title }}</td>
+      <td>{{ p.price }}</td>
+      <td>{{ p.quantity }}</td>
+    </tr>
+
+  </tbody>
+</table>-->
+
+
+<!--{{ photoURL }}
+<img [src]="photoURL" width="50%" alt="">-->
+
+
+<!-- DAY  2 -->
+<!--
+<h3>Employees List:</h3>
+<ul>
+  <li *ngFor="let emp of employees">
+    
+    
+    <p *ngIf=" emp.year < 2010  "  style="color: orange;">
+      <strong>{{ emp.fullname }}</strong>
+    </p>
+
+    <p *ngIf="emp.year >= 2010"  style="color: greenyellow;">
+      <strong>{{ emp.fullname }}</strong>
+    </p>
+
+    <p>
+      <small>{{ emp.email }}</small> / <small>{{ emp.year }}</small>
+    </p> 
+    
+  </li>
+</ul>-->
+
+
+
+
+
+
+<h3>Employees List:</h3>
+<ul>
+  <li *ngFor="let emp of employees">
+    
+    
+    <p class="x y"   [ngClass]="    emp.year < 2010 ? 'old-employee' : 'new-employee'      " >
+      <strong>{{ emp.fullname }}</strong>
+    </p> 
+
+    <p>
+      <small>{{ emp.email }}</small> / <small>{{ emp.year }}</small>
+    </p> 
+    
+  </li>
+</ul>
+
+
+<div  [innerHTML]="content"   ></div>

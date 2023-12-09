@@ -1,0 +1,15 @@
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-body">
+            <h3>My Shopping List</h3>
+            
+                <ul class="list-group">
+                    <li *ngFor="let e of list" class="list-group-item">{{ e }}</li> 
+                </ul>
+ 
+            <div>
+                <input   (keyup)="typing($event)"     type="text" class="form-control" placeholder="Your shopping element">
+            </div>
+        </div>
+    </div>
+</div>

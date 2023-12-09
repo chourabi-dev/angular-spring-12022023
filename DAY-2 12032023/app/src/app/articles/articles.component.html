@@ -1,0 +1,12 @@
+<h3>Articles list:</h3>
+
+
+
+<div *ngFor="let a of articles">
+    <app-article   
+    [title]=" a.title "
+    [content]=" a.content "
+    [likes]=" a.likes "
+     
+    ></app-article>
+</div>
