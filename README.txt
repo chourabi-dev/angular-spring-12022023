@@ -34,6 +34,9 @@ Set-ExecutionPolicy Unrestricted
 => ng g p pipe_name
 
 
+10 - create routes guard
+ng g g name
+
 
 
 

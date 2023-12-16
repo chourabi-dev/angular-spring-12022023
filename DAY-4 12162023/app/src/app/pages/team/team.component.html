@@ -1,0 +1,16 @@
+<h3>Our team</h3>
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam dicta perspiciatis corrupti laboriosam sunt voluptatibus nisi ut cupiditate assumenda doloremque omnis voluptate, veritatis libero exercitationem ab repudiandae esse hic veniam.
+</p>
+
+<h3>Our team list:</h3>
+<ul>
+    <li *ngFor="let e of employees">
+        <div>
+            <p>
+                <strong>{{ e.name }}</strong>
+            </p>
+            <a [routerLink]=" '/employee/details/'+e.id ">click to visit</a>
+        </div>
+    </li>
+</ul>
