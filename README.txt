@@ -38,6 +38,10 @@ Set-ExecutionPolicy Unrestricted
 ng g g name
 
 
+11 - create services 
+ng g s service_name
+
+
 
 
 

@@ -20,8 +20,16 @@ export class AuthGuard implements CanActivate {
       // redirect
       this.router.navigateByUrl('home');
 
+      /**
+       * 
+      if( user.conneced == true ){
+        return true;
+      }else{
+        return false;
+      }
+       */
 
-      return false;
+      return true;
   }
   
 }
