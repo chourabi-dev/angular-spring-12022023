@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { EmployeesService } from 'src/app/employees.service';
 
 @Component({
   selector: 'app-add-employee',
@@ -16,7 +17,7 @@ export class AddEmployeeComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor(private employeeService:EmployeesService) { }
 
   ngOnInit(): void {
   }
@@ -26,10 +27,8 @@ export class AddEmployeeComponent implements OnInit {
       // get data from the form !!
     const data = this.addEmployeeForm.value;
 
-    console.log(data); 
-
-
-    console.log(this.addEmployeeForm);
+    this.employeeService.add(data);
+    
     
   }
 

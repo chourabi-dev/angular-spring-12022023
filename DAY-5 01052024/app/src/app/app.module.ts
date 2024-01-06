@@ -8,6 +8,7 @@ import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import { NavbarComponent } from './componenets/navbar/navbar.component';
 import { AddEmployeeComponent } from './pages/add-employee/add-employee.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EmployeesPageComponent } from './pages/employees-page/employees-page.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProductPageComponent,
     CartPageComponent,
     NavbarComponent,
-    AddEmployeeComponent
+    AddEmployeeComponent,
+    EmployeesPageComponent
   ],
   imports: [
     BrowserModule,
