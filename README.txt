@@ -45,3 +45,12 @@ ng g s service_name
 
 
 
+spring JPA METHODS
+https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html
+
+
+Spring Joints
+https://www.baeldung.com/jpa-many-to-many
+
+
+
