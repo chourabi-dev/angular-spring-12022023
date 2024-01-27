@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="">
+        <div class="">
+            <h3>List des vehicules</h3>
+            <a routerLink="/vehicule/add">Add new car</a>
+        </div>
+ 
+        
+        <div class="row">
+            <div *ngFor="let v of vehicules" class="col-12 col-sm-4 col-md-3 mb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h3> {{ v.mark }}, {{ v.model }}</h3>
+                        <div class="car-badge"    [style.backgroundColor]="v.color"    ></div> 
+                        <p class="text-muted">
+                            {{ v.immatriculation }}
+                        </p>
+                        <p class="text-muted">
+                            {{ v.vin }}
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

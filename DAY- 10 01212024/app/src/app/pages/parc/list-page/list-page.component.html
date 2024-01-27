@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>List des parcs</h3>
+            <a routerLink="/parc/add">add new parc</a>
+        </div>
+        <div class="card-body">
+            <table class="table">
+               <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Address</th>  
+                    <th>Vehicules</th>  
+                    
+                </tr>
+               </thead>
+               <tbody>
+                <tr *ngFor="let p of parcs">
+                    <td>
+                        {{ p.id }}
+                    </td>
+                    <td>
+                        {{ p.name }}
+                    </td>
+                    <td>
+                        {{ p.address }}
+                    </td>
+                    <td>
+                        {{ p.vehicules.length }} vehicule(s)
+                    </td>
+                    
+                </tr>
+                
+               </tbody>
+            </table>
+        </div>
+    </div>
+</div>

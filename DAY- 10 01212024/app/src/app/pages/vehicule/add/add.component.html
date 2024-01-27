@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Add new car</h3>
+            <a routerLink="/vehicule">Back to list</a>
+        </div>
+        <div class="card-body">
+                <form [formGroup]="form" (ngSubmit)="save()">
+                    <div class="mb-3">
+                        <label for="">Mark</label>
+                        <input type="text" class="form-control" formControlName="mark">
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Model</label>
+                        <input type="text" class="form-control" formControlName="model">
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Immatriculation</label>
+                        <input type="text" class="form-control" formControlName="immatriculation">
+                    </div>
+                    <div class="mb-3">
+                        <label for="">VIN</label>
+                        <input type="text" class="form-control" formControlName="vin">
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Color</label>
+                        <input type="color" class="form-control" formControlName="color">
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Parc</label>
+                        <select class="form-control" formControlName="parc">
+                            <option value="">Please choose a value</option>
+                            <option *ngFor="let p of parcs"  [value]="p.id">{{ p.name }}</option>
+                        </select>
+
+                    </div>
+                    
+                    
+                   
+                    
+                    <div>
+                        <button type="submit" class="btn btn-primary" [disabled]=" ! form.valid" > Save data</button>
+                    </div>
+                    
+                </form>
+        </div>
+    </div>
+</div>

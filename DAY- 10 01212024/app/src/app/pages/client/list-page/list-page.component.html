@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>List des clients</h3>
+            <a routerLink="/client/add">add new client</a>
+        </div>
+        <div class="card-body">
+            <table class="table">
+               <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Fullname</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+               </thead>
+               <tbody>
+                <tr *ngFor="let c of clients" >
+                    <td>{{ c.id }}</td>
+                    <td>{{ c.name }}</td>
+                    <td>{{ c.phone }}</td>
+                    <td>{{ c.email }}</td>
+                    <td>
+                        <a [routerLink]="'/client/add-intervention/'+c.id" class="btn btn-outline-warning">add intervention</a>
+                    </td>
+                    
+                    
+                </tr>
+                
+               </tbody>
+            </table>
+        </div>
+    </div>
+</div>

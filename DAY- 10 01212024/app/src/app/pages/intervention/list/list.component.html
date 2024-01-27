@@ -1,0 +1,47 @@
+<div class="container mt-5">
+    <div>
+
+        <div class="card">
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Date</th>
+                            <th>INFO</th>
+                            <th>Client</th>
+                            <th>CAR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let i of data">
+                            <td>{{ i.id }}</td>
+                            <td>
+                                {{ i.createdAt | date:'medium' }}
+                            </td>
+                            <td>
+                                <p class="text-muted">
+                                    {{ i.decreption }}
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    <strong>
+                                        {{ i.client.name }}
+                                    </strong> <br>
+                                    <span class="text-muted">
+                                        {{ i.client.email }}
+                                    </span>
+                                </p>
+                            </td>
+                            <td>
+                                {{ i.vehicule.mark }} {{ i.vehicule.model }}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
